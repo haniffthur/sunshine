@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="icon" type="image/png" href="dist/icon/Logo 1.png">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="mx-auto max-w-[1920px] scroll-smooth bg-black">
+    <!--Navbar-->
+    <div id="navbar" class="bg-black text-mekarsari shadow-lg shadow-white md:block hidden fixed top-0 w-full z-50 transition-transform duration-500 transform">
+        <div class="container mx-auto flex items-center h-20">
+          <a href="index-id.html" class="flex items-center justify-center">
+            <img class="h-16 ml-4" src="dist/icon/Logo 1.png" alt="" />
+            <span class="ml-2 uppercase font-bold text-2xl text-white">Sunshine</span>
+          </a>
+          <nav class="contents font-semibold text-base lg:text-lg">
+            <ul class="mx-auto flex md:gap-8 items-center">
+              <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
+                <a href="index.html">Beranda</a>
+              </li>
+              <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
+                <a href="about.html">Tentang Kami</a>
+              </li>
+              <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
+                <a href="#produk">Produk</a>
+              </li>
+              
+            </ul>
+          </nav>
+          <a href="#ContactUs">
+            <button class="mr-10 border-2 rounded-full font-bold px-8 py-2 bg-white text-black hover:bg-slate-200 transition-all duration-300">Hubungi Kami</button>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Responsive Navbar for smaller screens -->
+      <div class="block md:hidden bg-black shadow-lg shadow-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="index.html" class="flex items-center">
+            <img class="h-12" src="dist/icon/Logo 1.png" alt="Logo" />
+            <span class="ml-2 text-xl font-bold text-white">Sunshine</span>
+          </a>
+          <button id="mobile-menu-toggle" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4">
+          <a href="index.html" class="block text-base font-medium text-white">Beranda</a>
+          <a href="#" class="block text-base font-medium text-white">Tentang Kami</a>
+          <a href="#produk" class="block text-base font-medium text-white">Layanan & Produk</a>
+        </div>
+      </div>
+      
+      <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
+        // Set navbar to visible when the page loads
+        navbar.classList.remove('-translate-y-full');
+      
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+          if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('-translate-y-full');
+          } else {
+            // Scrolling up
+            navbar.classList.remove('-translate-y-full');
+          }
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Ensure we don't get negative scroll values
+        });
+      
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+      <!--End Navbar-->
+
+      <section class="bg-black py-28">
+        <div class="container mx-auto text-center px-4">
+          <!-- Judul Koleksi -->
+          <h1 class="text-4xl md:text-6xl font-jkt font-bold text-white">
+            SUNSHINE
+          </h1>
+          <h2 class="text-xs md:text-basic font-light text-white mt-2">
+            NEW COLLECTION
+          </h2>
+          <p class="text-basic text-white mt-4">
+            SHOP ON <a href="https://shopee.co.id/sunshine.ino?entryPoint=ShopBySearch&searchKeyword=sunshine.ino" class="underline">www.sunshine.ino</a>
+          </p>
+      
+          <!-- Grid Gambar -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
+            <div class="relative">
+              <img src="dist/img/SUNSINE/poster 1.png" alt="Produk 1" class="w-full h-auto object-cover animate-bounce-up-down">
+            </div>
+            <div class="relative mt-20">
+              <img src="dist/img/SUNSINE/poster 2.png" alt="Produk 2" class="w-full h-auto object-cover animate-bounce-down-up">
+            </div>
+            <div class="relative">
+              <img src="dist/img/SUNSINE/poster 4.png" alt="Produk 3" class="w-full h-auto object-cover animate-bounce-up-down">
+            </div>
+            <div class="relative mt-20">
+              <img src="dist/img/SUNSINE/poster 5.png" alt="Produk 4" class="w-full h-auto object-cover animate-bounce-down-up">
+            </div>
+            <div class="relative">
+              <img src="dist/img/SUNSINE/poster 7.png" alt="Produk 5" class="w-full h-auto object-cover animate-bounce-up-down">
+            </div>
+            <div class="relative mt-20">
+              <img src="dist/img/SUNSINE/poster 9.png" alt="Produk 6" class="w-full h-auto object-cover animate-bounce-down-up">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="bg-gray-100 pt-28 pb-28">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl font-bold text-gray-800 mb-6">Temukan Apa yang Anda Cari</h1>
+          <p class="text-lg text-gray-600 mb-8">
+            Jelajahi baju-baju yang ingin kamu pakai hari ini!
+          </p>
+          <form class="max-w-lg mx-auto">
+            <div class="relative">
+              <input 
+                type="text" 
+                placeholder="Cari sesuatu..." 
+                class="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+              />
+              <button 
+              type="submit" 
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-lg hover:bg-[#1A1A19] focus:ring-2 focus:ring-opacity-50"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+            
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      
+      <!--Card-->
+      <div id="produk" class="pt-20">
+      <div class="flex justify-center">
+        <p class="font-sans text-white font-bold text-2xl pb-10 flex justify-center">Produk kami</p>
+      </div>
+        <!--
+      <div class="flex justify-center">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 1.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 2.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 3.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 4.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 5.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 6.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 7.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
+            <a href="detail-produk.html">
+              <img src="dist/img/poster 8.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
+              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
+              <div class="tracking-wide font-medium text-[#808080] text-xs">
+                <p class="flex space-x-1"></p>
+                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
+                <p>4,9</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+      <!-- Product Card -->
+      <div class="product-card border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg" onclick="openProductDetail('1')">
+        <img src="dist/img/poster 1.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+            <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 019</p>
+            <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+            <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+     </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 2.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 011</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 3.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-lg text-white font-bold mb-4">Sunshine T-shirt - INO 007</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 4.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 001</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 5.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 008</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 6.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 018</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 7.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 017</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 8.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 003</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 9.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 002</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 10.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 010</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 11.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 004</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+        <img src="dist/img/poster 12.png" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <p class="text-basic text-white font-bold mb-4">Sunshine T-shirt - INO 009</p>
+          <p class="text-sm text-red-500 font-bold">Rp135.000</p>
+          <p class="text-xs text-gray-500 mt-1">3,5RB Terjual</p>
+        </div>
+      </div>
+      <!-- Add more product cards as needed -->
+    </div>
+    <div class="font-[sans-serif] max-w-6xl mx-auto relative bg-black shadow-[0_2px_10px_-3px_rgba(255,255,255,255.255)] rounded-3xl overflow-hidden mt-4 mb-4">
+      <div class="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-white"></div>
+      <div class="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-white"></div>
+
+      <div class="grid md:grid-cols-2 gap-8 py-8 px-6">
+        <div class="text-center flex flex-col items-center justify-center">
+          <img src="dist/img/Sizechart.webp" class="shrink-0 w-5/6" />
+        </div>
+
+        <form class="rounded-tl-3xl rounded-bl-3xl">
+          <h2 class="text-2xl text-white font-bold text-center mb-6">Contact us</h2>
+          <div class="max-w-md mx-auto space-y-3 relative">
+            <input type='text' placeholder='Name'
+              class="w-full rounded-md py-3 px-4 text-sm outline-black focus-within:bg-white" />
+            <input type='email' placeholder='Email'
+              class="w-full rounded-md py-3 px-4 text-sm outline-black focus-within:bg-white" />
+            <input type='email' placeholder='Phone No.'
+              class="w-full rounded-md py-3 px-4 text-sm outline-black focus-within:bg-white" />
+            <textarea placeholder='Message' rows="6"
+              class="w-full rounded-md px-4 text-sm pt-3 outline-black focus-within:bg-white"></textarea>
+
+            <button type='button'
+              class="text-black w-full relative bg-white hover:bg-gray-300 rounded-md text-sm px-6 py-3 !mt-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' class="mr-2 inline" viewBox="0 0 548.244 548.244">
+                <path fill-rule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clip-rule="evenodd" data-original="#000000" />
+              </svg>
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+  
+        links.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+  
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+  
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+</body>
+</html>
