@@ -13,26 +13,26 @@
     <!--Navbar-->
     <div id="navbar" class="bg-black text-mekarsari shadow-lg shadow-white md:block hidden fixed top-0 w-full z-50 transition-transform duration-500 transform">
         <div class="container mx-auto flex items-center h-20">
-          <a href="index-id.html" class="flex items-center justify-center">
+          <a href="index.html" class="flex items-center justify-center">
             <img class="h-16 ml-4" src="dist/icon/Logo 1.png" alt="" />
             <span class="ml-2 uppercase font-bold text-2xl text-white">Sunshine</span>
           </a>
           <nav class="contents font-semibold text-base lg:text-lg">
             <ul class="mx-auto flex md:gap-8 items-center">
               <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
-                <a href="index.html">Beranda</a>
+                <a href="index.html">Home</a>
               </li>
               <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
-                <a href="about.html">Tentang Kami</a>
+                <a href="#search">Search</a>
               </li>
               <li class="p-5 md:py-2 md:px-2 text-sm hover:border-b-2 hover:border-mekarsari  text-white">
-                <a href="#produk">Produk</a>
+                <a href="#produk">Product</a>
               </li>
               
             </ul>
           </nav>
           <a href="#ContactUs">
-            <button class="mr-10 border-2 rounded-full font-bold px-8 py-2 bg-white text-black hover:bg-slate-200 transition-all duration-300">Hubungi Kami</button>
+            <button class="mr-10 border-2 rounded-full font-bold px-8 py-2 bg-white text-black hover:bg-slate-200 transition-all duration-300">Contact Us</button>
           </a>
         </div>
       </div>
@@ -51,9 +51,9 @@
           </button>
         </div>
         <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4">
-          <a href="index.html" class="block text-base font-medium text-white">Beranda</a>
-          <a href="#" class="block text-base font-medium text-white">Tentang Kami</a>
-          <a href="#produk" class="block text-base font-medium text-white">Layanan & Produk</a>
+          <a href="index.html" class="block text-base font-medium text-white">Home</a>
+          <a href="#search" class="block text-base font-medium text-white">Search</a>
+          <a href="#produk" class="block text-base font-medium text-white">Product</a>
         </div>
       </div>
       
@@ -123,131 +123,34 @@
         </div>
       </section>
       
-      <section class="bg-gray-100 pt-28 pb-28">
+      <section class="bg-gray-100 pt-28 pb-28" id="search">
         <div class="container mx-auto px-4 text-center">
-          <h1 class="text-4xl font-bold text-gray-800 mb-6">Temukan Apa yang Anda Cari</h1>
-          <p class="text-lg text-gray-600 mb-8">
-            Jelajahi baju-baju yang ingin kamu pakai hari ini!
-          </p>
-          <form class="max-w-lg mx-auto">
+          <h1 class="text-4xl font-bold text-gray-800 mb-6">Find What You're Looking For!</h1>
+          <p class="text-lg text-gray-600 mb-8">Browse through the clothes you want to wear today!</p>
+          <form class="max-w-lg mx-auto mb-8">
             <div class="relative">
               <input 
                 type="text" 
-                placeholder="Cari sesuatu..." 
+                id="search-input" 
+                placeholder="search" 
                 class="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
               />
               <button 
-              type="submit" 
-              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-lg hover:bg-[#1A1A19] focus:ring-2 focus:ring-opacity-50"
-            >
-              <i class="fas fa-search"></i>
-            </button>
-            
+                type="submit" 
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-lg hover:bg-[#1A1A19] focus:ring-2 focus:ring-opacity-50"
+              >
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </form>
-        </div>
       </section>
-      
       
       <!--Card-->
       <div id="produk" class="pt-20">
       <div class="flex justify-center">
-        <p class="font-sans text-white font-bold text-2xl pb-10 flex justify-center">Produk kami</p>
+        <p class="font-sans text-white font-bold text-2xl pb-10 flex justify-center">Our Product</p>
       </div>
-        <!--
-      <div class="flex justify-center">
-        <div class="grid grid-cols-4 gap-4">
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 1.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 2.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 3.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 4.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 5.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 6.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 7.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-          <div class="bg-slate-50 w-[240px] rounded-xl px-4 py-4">
-            <a href="detail-produk.html">
-              <img src="dist/img/poster 8.png" alt="" class="h-[250px] w-full object-cover rounded-xl overflow-hidden">
-              <h1 class="text-xl tracking-wide font-medium py-2 break-words">PRODUK 1</h1>
-              <div class="tracking-wide font-medium text-[#808080] text-xs">
-                <p class="flex space-x-1"></p>
-                <img src="dist/icon/star.svg" alt="" class="w-5 h-5">
-                <p>4,9</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>-->
+      
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
       <!-- Product Card -->
       <a href="detail-produk.html" 
@@ -261,7 +164,7 @@
         <div class="p-4">
             <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 019</p>
             <p class="text-red-500 font-bold">Rp135.000</p>
-            <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+            <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
         </div>
     </div>
 </a>
@@ -277,7 +180,7 @@
         <div class="p-4">
             <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 011</p>
             <p class="text-red-500 font-bold">Rp135.000</p>
-            <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+            <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
         </div>
     </div>
 </a>
@@ -293,7 +196,7 @@ data-description="Sunshine T-shirt - INO 007 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 007</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -308,7 +211,7 @@ data-description="Sunshine T-shirt - INO 001 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 001</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -323,7 +226,7 @@ data-description="Sunshine T-shirt - INO 008 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 008</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -338,7 +241,7 @@ data-description="Sunshine T-shirt - INO 018 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 018</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -353,7 +256,7 @@ data-description="Sunshine T-shirt - INO 017 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 017</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -368,7 +271,7 @@ data-description="Sunshine T-shirt - INO 003 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 003</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -383,7 +286,7 @@ data-description="Sunshine T-shirt - INO 002 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 002</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -398,7 +301,7 @@ data-description="Sunshine T-shirt - INO 010 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 010</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -413,7 +316,7 @@ data-description="Sunshine T-shirt - INO 004 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 004</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
@@ -428,13 +331,13 @@ data-description="Sunshine T-shirt - INO 009 - Cotton Combed 24s / Kaos Pria Wan
      <div class="p-4">
          <p class="text-white font-bold mb-2">Sunshine T-shirt - INO 009</p>
          <p class="text-red-500 font-bold">Rp135.000</p>
-         <p class="text-gray-500 text-xs mt-1">3,5RB Terjual</p>
+         <p class="text-gray-500 text-xs mt-1">Availability: In Stock</p>
      </div>
  </div>
 </a>
       <!-- Add more product cards as needed -->
     </div>
-    <div class="font-[sans-serif] max-w-6xl mx-auto relative bg-black shadow-[0_2px_10px_-3px_rgba(255,255,255,255.255)] rounded-3xl overflow-hidden mt-4 mb-4">
+    <div id="ContactUs" class="font-[sans-serif] max-w-6xl mx-auto relative bg-black shadow-[0_2px_10px_-3px_rgba(255,255,255,255.255)] rounded-3xl overflow-hidden mt-4 mb-4">
       <div class="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-white"></div>
       <div class="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-white"></div>
 
@@ -474,10 +377,10 @@ data-description="Sunshine T-shirt - INO 009 - Cotton Combed 24s / Kaos Pria Wan
           </h1>
     
           <ul class="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:underline text-base">Home</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:underline text-base">About</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:underline text-base">Services</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:underline text-base">Contact</a></li>
+            <li><a href="index.html" class="text-gray-300 hover:underline text-base">Home</a></li>
+            <li><a href="#search" class="text-gray-300 hover:underline text-base">Search</a></li>
+            <li><a href="#produk" class="text-gray-300 hover:underline text-base">Product</a></li>
+            <li><a href="#ContactUs" class="text-gray-300 hover:underline text-base">Contact</a></li>
           </ul>
         </div>
     
@@ -490,7 +393,7 @@ data-description="Sunshine T-shirt - INO 009 - Cotton Combed 24s / Kaos Pria Wan
               <path d="M 50 7 C 40.31831 7 32.567577 15.489997 32.089844 26 L 16.998047 26 C 15.873687 26 14.950576 26.961048 15 28.085938 L 17.166016 78.34375 C 17.350697 82.614225 20.886038 86 25.160156 86 L 74.839844 86 C 79.113962 86 82.648471 82.615469 82.832031 78.345703 L 85 28.085938 C 85.049424 26.961048 84.126313 26 83.001953 26 L 67.910156 26 C 67.432423 15.489997 59.68169 7 50 7 z M 50 9 C 58.78496 9 66 16.99056 66 27 A 1.0001 1.0001 0 0 0 67 28 L 83 28 L 80.833984 78.259766 C 80.695544 81.48 78.063726 84 74.839844 84 L 25.160156 84 C 21.936274 84 19.305334 81.479338 19.166016 78.257812 L 17 28 L 33 28 A 1.0001 1.0001 0 0 0 34 27 C 34 16.99056 41.21504 9 50 9 z M 50 12 C 42.750286 12 37 18.815147 37 27 A 1.0001 1.0001 0 0 0 38 28 L 62.001953 28 A 1.0001 1.0001 0 0 0 63.001953 27 C 63.000893 18.815217 57.249714 12 50 12 z M 50 14 C 55.690503 14 60.370248 19.251674 60.830078 26 L 39.171875 26 C 39.630919 19.251772 44.309516 14 50 14 z M 50.099609 36 C 43.335962 36 38.099609 40.279716 38.099609 46 C 38.099609 49.217019 39.642501 51.453316 41.779297 53.03125 C 43.916093 54.609184 46.637356 55.593706 49.150391 56.511719 C 52.184523 57.620843 54.592719 58.598183 56.1875 59.832031 C 57.782281 61.065879 58.599609 62.493209 58.599609 64.767578 C 58.599609 66.43674 57.671018 67.973016 56.09375 69.121094 C 54.516482 70.269172 52.301403 71 49.849609 71 C 47.118757 71 44.554841 69.994259 42.671875 68.972656 C 41.730392 68.461855 40.959155 67.94873 40.423828 67.5625 C 40.156165 67.369385 39.946967 67.209099 39.804688 67.095703 C 39.662407 66.982307 39.536803 66.870657 39.591797 66.919922 L 39.166016 66.539062 L 36.894531 69.886719 L 37.251953 70.175781 C 38.527877 71.209755 43.584463 75 49.849609 75 C 56.926063 75 62.599609 70.553269 62.599609 64.767578 C 62.599609 60.999587 60.931807 58.431943 58.595703 56.636719 C 56.2596 54.841494 53.277012 53.761387 50.523438 52.755859 C 47.807778 51.762861 45.650028 50.896576 44.226562 49.869141 C 42.803097 48.841705 42.099609 47.732671 42.099609 46.001953 C 42.099609 44.276625 42.901507 42.810746 44.306641 41.736328 C 45.711774 40.66191 47.729597 40.001953 50.099609 40.001953 C 53.257442 40.001953 56.047452 41.208102 57.554688 42.021484 C 57.708655 42.104454 58.096661 42.333363 58.435547 42.544922 L 58.4375 42.544922 C 58.901764 42.833358 59.524593 42.686049 59.8125 42.224609 L 59.814453 42.222656 L 60.849609 40.542969 L 60.847656 40.542969 C 61.129486 40.088882 61.001131 39.470585 60.544922 39.177734 C 59.248364 38.342541 55.246259 36 50.099609 36 z"></path>
             </svg>
           </a>
-          <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">
+          <a href="https://wa.me/6285709421993" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">
             <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32">
               <path d="M16.002 3C8.826 3 3 8.826 3 16.002c0 2.647.679 5.255 1.976 7.555L3 29l5.558-1.92c2.262 1.256 4.83 1.921 7.444 1.921C23.176 29 29 23.174 29 16.002 29 8.826 23.176 3 16.002 3zm.023 23.882c-2.308 0-4.567-.616-6.548-1.785l-.47-.28-3.296 1.136 1.128-3.22-.304-.52c-.76-1.298-1.159-2.78-1.159-4.308 0-4.936 4.014-8.957 8.962-8.957 4.91 0 8.96 4.001 8.96 8.957 0 4.948-4.033 8.957-8.973 8.957zm4.918-6.658c-.27-.135-1.598-.793-1.844-.882-.246-.09-.426-.135-.605.135-.18.27-.696.882-.854 1.065-.156.18-.315.202-.586.068-.27-.135-1.138-.417-2.166-1.331-.798-.71-1.338-1.58-1.496-1.85-.156-.27-.016-.414.12-.548.123-.123.27-.315.405-.47.135-.156.18-.27.27-.45.09-.18.045-.337-.022-.47-.068-.135-.605-1.46-.83-2.005-.218-.525-.44-.455-.605-.462h-.52c-.18 0-.47.067-.715.338-.246.27-.936.914-.936 2.225 0 1.31.957 2.575 1.092 2.75.135.18 1.876 2.875 4.545 4.032.636.273 1.133.435 1.522.558.64.203 1.22.174 1.678.105.512-.078 1.598-.653 1.822-1.283.225-.63.225-1.172.158-1.283-.068-.112-.25-.18-.52-.315z"/>
             </svg>
@@ -540,6 +443,30 @@ data-description="Sunshine T-shirt - INO 009 - Cotton Combed 24s / Kaos Pria Wan
               this.href = `detail-produk.html?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&image=${encodeURIComponent(image)}&description=${encodeURIComponent(description)}`;
           });
       });
+  </script>
+  <script>
+    // Ambil elemen input dan daftar produk
+    const searchInput = document.getElementById('search-input');
+    const productList = document.getElementById('product-list');
+  
+    // Fungsi pencarian
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();  // Ambil nilai input pencarian dan ubah jadi lowercase
+  
+      // Ambil semua kartu produk
+      const productCards = document.querySelectorAll('.product-card-link');
+  
+      productCards.forEach(card => {
+        const productName = card.getAttribute('data-name').toLowerCase();  // Ambil nama produk dari data-name
+  
+        // Jika nama produk mengandung kata kunci pencarian, tampilkan produk
+        if (productName.includes(query)) {
+          card.style.display = 'block';  // Tampilkan kartu produk
+        } else {
+          card.style.display = 'none';  // Sembunyikan kartu produk yang tidak cocok
+        }
+      });
+    });
   </script>
   
   
