@@ -8,6 +8,7 @@
     <link href="src/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body class="mx-auto max-w-[1920px] scroll-smooth bg-black">
     <!--Navbar-->
@@ -257,57 +258,38 @@
       selectedSize = button.getAttribute('data-size'); // Get selected size
     });
   });
+  
 
   // Handle Add to Cart button click
   addToCartButton.addEventListener('click', () => {
-    if (!selectedSize) {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Pilih Ukuran Dulu!',
-        text: 'Silakan pilih ukuran sebelum menambahkan ke keranjang.',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'OK',
-      });
-      return;
-    }
+  if (!selectedSize) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Pilih Ukuran Dulu!',
+      text: 'Silakan pilih ukuran sebelum menambahkan ke keranjang.',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK',
+    });
+    return;
+  }
 
     const productName = document.getElementById('product-name').innerText;
     const productPrice = document.getElementById('product-price').innerText;
     const productImage = document.getElementById('product-image').src;
 
-    // SweetAlert confirmation
-    Swal.fire({
-      title: 'Konfirmasi Pesanan',
-      html: `
-        <p><strong>Nama Produk:</strong> ${productName}</p>
-        <p><strong>Harga:</strong> ${productPrice}</p>
-        <p><strong>Ukuran:</strong> ${selectedSize}</p>
-      `,
-      imageUrl: productImage,
-      imageWidth: 200,
-      imageAlt: 'Product Image',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Pesan via WhatsApp',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // WhatsApp API link
-        const whatsappMessage = `https://wa.me/62895326418291?text=${encodeURIComponent(
-          `Halo, saya ingin membeli:\n\n` +
-          `Nama Produk: ${productName}\n` +
-          `Harga: ${productPrice}\n` +
-          `Ukuran: ${selectedSize}\n\n` +
-          `Tolong proses ya! 😊`
-        )}`;
+    // WhatsApp API link
+    const whatsappMessage = `https://wa.me/62895326418291?text=${encodeURIComponent(
+      `Halo, saya ingin membeli:\n\n` +
+      `Nama Produk: ${productName}\n` +
+      `Harga: ${productPrice}\n` +
+      `Ukuran: ${selectedSize}\n\n` +
+      `Tolong proses ya! 😊`
+    )}`;
 
-        // Open WhatsApp chat
-        window.open(whatsappMessage, '_blank');
-      }
-    });
+    // Open WhatsApp chat
+    window.open(whatsappMessage, '_blank');
   });
 </script>
-
 <script>
   // Fungsi untuk membaca query string
   function getQueryParams() {
